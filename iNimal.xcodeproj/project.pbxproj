@@ -17,6 +17,10 @@
 		BF15F2A128357CE100968B3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15F27728357CDC00968B3F /* ContentView.swift */; };
 		BF15F2A228357CE100968B3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF15F27828357CE100968B3F /* Assets.xcassets */; };
 		BF15F2A328357CE100968B3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF15F27828357CE100968B3F /* Assets.xcassets */; };
+		BF15F2B32835815300968B3F /* LitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15F2B22835815300968B3F /* LitterView.swift */; };
+		BF15F2B42835815300968B3F /* LitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15F2B22835815300968B3F /* LitterView.swift */; };
+		BF15F2B7283581D400968B3F /* Litter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15F2B6283581D400968B3F /* Litter.swift */; };
+		BF15F2B8283581D400968B3F /* Litter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15F2B6283581D400968B3F /* Litter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,8 @@
 		BF15F29628357CE100968B3F /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF15F29A28357CE100968B3F /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		BF15F29C28357CE100968B3F /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		BF15F2B22835815300968B3F /* LitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitterView.swift; sourceTree = "<group>"; };
+		BF15F2B6283581D400968B3F /* Litter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Litter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 		BF15F27028357CDC00968B3F = {
 			isa = PBXGroup;
 			children = (
+				BF15F2B5283581B500968B3F /* Model */,
 				BF15F27528357CDC00968B3F /* Shared */,
 				BF15F28428357CE100968B3F /* macOS */,
 				BF15F28D28357CE100968B3F /* Tests iOS */,
@@ -100,6 +107,7 @@
 				BF15F27628357CDC00968B3F /* iNimalApp.swift */,
 				BF15F27728357CDC00968B3F /* ContentView.swift */,
 				BF15F27828357CE100968B3F /* Assets.xcassets */,
+				BF15F2B22835815300968B3F /* LitterView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -139,6 +147,14 @@
 				BF15F29C28357CE100968B3F /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		BF15F2B5283581B500968B3F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF15F2B6283581D400968B3F /* Litter.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +316,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF15F2A028357CE100968B3F /* ContentView.swift in Sources */,
+				BF15F2B7283581D400968B3F /* Litter.swift in Sources */,
 				BF15F29E28357CE100968B3F /* iNimalApp.swift in Sources */,
+				BF15F2B32835815300968B3F /* LitterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +327,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF15F2A128357CE100968B3F /* ContentView.swift in Sources */,
+				BF15F2B8283581D400968B3F /* Litter.swift in Sources */,
 				BF15F29F28357CE100968B3F /* iNimalApp.swift in Sources */,
+				BF15F2B42835815300968B3F /* LitterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
