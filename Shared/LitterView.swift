@@ -39,7 +39,6 @@ struct LitterView: View {
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        
         LitterView(litter: Litter(id: 1, name: "Salon", emoji: "🏠", lastClean: Date()))
     }
 }

@@ -8,21 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var litters = getAllLitters()
+    @State private var addingLitter = false
+    
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Text("iNimal")
-                    .font(.title)
-                Spacer()
+        NavigationView {
+            ScrollView {
+                VStack(alignment: .leading) {
+                    ForEach(litters, id: \.id) { litter in
+                        LitterView(litter: litter)
+                            .padding([.leading, .trailing], 20)
+                            .padding([.top, .bottom], 8)
+                    }
+                }
             }
-            .padding()
-            VStack(alignment: .leading, spacing: 0) {
-                LitterView(litter: Litter(id: 1, name: "Salon", emoji: "🏠", lastClean: Date()))
-                    .padding()
-                LitterView(litter: Litter(id: 2, name: "Ambre", emoji: "🏠", lastClean: Date()))
-                    .padding()
+            .navigationTitle("iNimal")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        addingLitter.toggle()
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                    .sheet(isPresented: $addingLitter, onDismiss: {litters = getAllLitters()}) {
+                        AddLitterView()
+                    }
+                }
             }
-            Spacer()
         }
     }
 }

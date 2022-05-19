@@ -21,6 +21,16 @@
 		BF15F2B42835815300968B3F /* LitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15F2B22835815300968B3F /* LitterView.swift */; };
 		BF15F2B7283581D400968B3F /* Litter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15F2B6283581D400968B3F /* Litter.swift */; };
 		BF15F2B8283581D400968B3F /* Litter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15F2B6283581D400968B3F /* Litter.swift */; };
+		BFD4E6AC28363ABF005957C2 /* AddLitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4E6AB28363ABF005957C2 /* AddLitterView.swift */; };
+		BFD4E6AD28363ABF005957C2 /* AddLitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4E6AB28363ABF005957C2 /* AddLitterView.swift */; };
+		BFD4E6AF28364025005957C2 /* EmojiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4E6AE28364025005957C2 /* EmojiTextField.swift */; };
+		BFD4E6B028364025005957C2 /* EmojiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4E6AE28364025005957C2 /* EmojiTextField.swift */; };
+		BFD4E6B32836420B005957C2 /* ObjectSavable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4E6B22836420B005957C2 /* ObjectSavable.swift */; };
+		BFD4E6B42836420B005957C2 /* ObjectSavable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4E6B22836420B005957C2 /* ObjectSavable.swift */; };
+		BFD4E6B628364296005957C2 /* ObjectSavableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4E6B528364296005957C2 /* ObjectSavableError.swift */; };
+		BFD4E6B728364296005957C2 /* ObjectSavableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4E6B528364296005957C2 /* ObjectSavableError.swift */; };
+		BFD4E6B92836640A005957C2 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4E6B82836640A005957C2 /* Data.swift */; };
+		BFD4E6BA2836640A005957C2 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4E6B82836640A005957C2 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +65,11 @@
 		BF15F29C28357CE100968B3F /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		BF15F2B22835815300968B3F /* LitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitterView.swift; sourceTree = "<group>"; };
 		BF15F2B6283581D400968B3F /* Litter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Litter.swift; sourceTree = "<group>"; };
+		BFD4E6AB28363ABF005957C2 /* AddLitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLitterView.swift; sourceTree = "<group>"; };
+		BFD4E6AE28364025005957C2 /* EmojiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTextField.swift; sourceTree = "<group>"; };
+		BFD4E6B22836420B005957C2 /* ObjectSavable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectSavable.swift; sourceTree = "<group>"; };
+		BFD4E6B528364296005957C2 /* ObjectSavableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectSavableError.swift; sourceTree = "<group>"; };
+		BFD4E6B82836640A005957C2 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +107,7 @@
 		BF15F27028357CDC00968B3F = {
 			isa = PBXGroup;
 			children = (
+				BFD4E6B1283641F3005957C2 /* Protocols */,
 				BF15F2B5283581B500968B3F /* Model */,
 				BF15F27528357CDC00968B3F /* Shared */,
 				BF15F28428357CE100968B3F /* macOS */,
@@ -108,6 +124,8 @@
 				BF15F27728357CDC00968B3F /* ContentView.swift */,
 				BF15F27828357CE100968B3F /* Assets.xcassets */,
 				BF15F2B22835815300968B3F /* LitterView.swift */,
+				BFD4E6AB28363ABF005957C2 /* AddLitterView.swift */,
+				BFD4E6AE28364025005957C2 /* EmojiTextField.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -153,8 +171,18 @@
 			isa = PBXGroup;
 			children = (
 				BF15F2B6283581D400968B3F /* Litter.swift */,
+				BFD4E6B82836640A005957C2 /* Data.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BFD4E6B1283641F3005957C2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BFD4E6B22836420B005957C2 /* ObjectSavable.swift */,
+				BFD4E6B528364296005957C2 /* ObjectSavableError.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,9 +344,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF15F2A028357CE100968B3F /* ContentView.swift in Sources */,
+				BFD4E6AC28363ABF005957C2 /* AddLitterView.swift in Sources */,
+				BFD4E6B628364296005957C2 /* ObjectSavableError.swift in Sources */,
 				BF15F2B7283581D400968B3F /* Litter.swift in Sources */,
+				BFD4E6AF28364025005957C2 /* EmojiTextField.swift in Sources */,
 				BF15F29E28357CE100968B3F /* iNimalApp.swift in Sources */,
 				BF15F2B32835815300968B3F /* LitterView.swift in Sources */,
+				BFD4E6B92836640A005957C2 /* Data.swift in Sources */,
+				BFD4E6B32836420B005957C2 /* ObjectSavable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,9 +360,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF15F2A128357CE100968B3F /* ContentView.swift in Sources */,
+				BFD4E6AD28363ABF005957C2 /* AddLitterView.swift in Sources */,
+				BFD4E6B728364296005957C2 /* ObjectSavableError.swift in Sources */,
 				BF15F2B8283581D400968B3F /* Litter.swift in Sources */,
+				BFD4E6B028364025005957C2 /* EmojiTextField.swift in Sources */,
 				BF15F29F28357CE100968B3F /* iNimalApp.swift in Sources */,
 				BF15F2B42835815300968B3F /* LitterView.swift in Sources */,
+				BFD4E6BA2836640A005957C2 /* Data.swift in Sources */,
+				BFD4E6B42836420B005957C2 /* ObjectSavable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +527,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
@@ -496,7 +535,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyro.iNimal;
 				PRODUCT_NAME = iNimal;
 				SDKROOT = iphoneos;
@@ -519,6 +558,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
@@ -526,7 +566,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyro.iNimal;
 				PRODUCT_NAME = iNimal;
 				SDKROOT = iphoneos;

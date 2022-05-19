@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Litter {
+struct Litter: ObjectSavable, Encodable, Decodable {
     var id: Int
     var name: String
     var emoji: String
@@ -42,6 +42,39 @@ struct Litter {
         }
         else {
             return Color.red
+        }
+    }
+    
+    public func serialize()throws -> Data {
+        let encoder = JSONEncoder()
+        do {
+            let data = try encoder.encode(self)
+            return data
+        } catch {
+            throw ObjectSavableError.unableToEncode
+        }
+    }
+    
+    public func setObject<Object>(_ object: Object, forKey: String) throws where Object: Encodable {
+        let defaults = UserDefaults.standard
+        let encoder = JSONEncoder()
+        do {
+            let data = try encoder.encode(object)
+            defaults.set(data, forKey: forKey)
+        } catch {
+            throw ObjectSavableError.unableToEncode
+        }
+    }
+    
+    public func getObject<Object>(forKey: String, castTo type: Object.Type) throws -> Object where Object: Decodable {
+        let defaults = UserDefaults.standard
+        guard let data = defaults.data(forKey: forKey) else { throw ObjectSavableError.noValue }
+        let decoder = JSONDecoder()
+        do {
+            let object = try decoder.decode(type, from: data)
+            return object
+        } catch {
+            throw ObjectSavableError.unableToDecode
         }
     }
 }
