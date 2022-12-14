@@ -21,6 +21,8 @@
 		BF15F2B42835815300968B3F /* LitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15F2B22835815300968B3F /* LitterView.swift */; };
 		BF15F2B7283581D400968B3F /* Litter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15F2B6283581D400968B3F /* Litter.swift */; };
 		BF15F2B8283581D400968B3F /* Litter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15F2B6283581D400968B3F /* Litter.swift */; };
+		BF9859392844CB6800855D03 /* NotificationPermissionRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9859382844CB6800855D03 /* NotificationPermissionRequestView.swift */; };
+		BF98593A2844CB6800855D03 /* NotificationPermissionRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9859382844CB6800855D03 /* NotificationPermissionRequestView.swift */; };
 		BFD4E6AC28363ABF005957C2 /* AddLitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4E6AB28363ABF005957C2 /* AddLitterView.swift */; };
 		BFD4E6AD28363ABF005957C2 /* AddLitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4E6AB28363ABF005957C2 /* AddLitterView.swift */; };
 		BFD4E6AF28364025005957C2 /* EmojiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4E6AE28364025005957C2 /* EmojiTextField.swift */; };
@@ -65,6 +67,7 @@
 		BF15F29C28357CE100968B3F /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		BF15F2B22835815300968B3F /* LitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitterView.swift; sourceTree = "<group>"; };
 		BF15F2B6283581D400968B3F /* Litter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Litter.swift; sourceTree = "<group>"; };
+		BF9859382844CB6800855D03 /* NotificationPermissionRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermissionRequestView.swift; sourceTree = "<group>"; };
 		BFD4E6AB28363ABF005957C2 /* AddLitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLitterView.swift; sourceTree = "<group>"; };
 		BFD4E6AE28364025005957C2 /* EmojiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTextField.swift; sourceTree = "<group>"; };
 		BFD4E6B22836420B005957C2 /* ObjectSavable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectSavable.swift; sourceTree = "<group>"; };
@@ -126,6 +129,7 @@
 				BF15F2B22835815300968B3F /* LitterView.swift */,
 				BFD4E6AB28363ABF005957C2 /* AddLitterView.swift */,
 				BFD4E6AE28364025005957C2 /* EmojiTextField.swift */,
+				BF9859382844CB6800855D03 /* NotificationPermissionRequestView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -266,7 +270,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
-				LastUpgradeCheck = 1330;
+				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					BF15F27C28357CE100968B3F = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -343,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9859392844CB6800855D03 /* NotificationPermissionRequestView.swift in Sources */,
 				BF15F2A028357CE100968B3F /* ContentView.swift in Sources */,
 				BFD4E6AC28363ABF005957C2 /* AddLitterView.swift in Sources */,
 				BFD4E6B628364296005957C2 /* ObjectSavableError.swift in Sources */,
@@ -359,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF98593A2844CB6800855D03 /* NotificationPermissionRequestView.swift in Sources */,
 				BF15F2A128357CE100968B3F /* ContentView.swift in Sources */,
 				BFD4E6AD28363ABF005957C2 /* AddLitterView.swift in Sources */,
 				BFD4E6B728364296005957C2 /* ObjectSavableError.swift in Sources */,
@@ -455,6 +461,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -507,6 +514,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -530,7 +538,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -561,7 +569,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,6 +591,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -611,6 +620,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;

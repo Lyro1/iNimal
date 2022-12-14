@@ -9,16 +9,26 @@ import SwiftUI
 
 struct LitterView: View {
     var litter: Litter
+    @State var tap = false
+    var animationDuration = 0.2
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text(litter.emoji)
-                    .font(.largeTitle)
+                ZStack {
+                    Circle()
+                        .strokeBorder(.gray.opacity(0.1), lineWidth: 1)
+                        .background(Circle().fill(.white))
+                    Text(litter.emoji)
+                        .font(.largeTitle)
+                }
+                .frame(width: 48, height: 48)
+                .position(x: 54, y: 48)
+                .shadow(color: .gray.opacity(0.1), radius: 4)
+                
                 Spacer()
             }
-            
-            .padding()
+            .background(Color("Pastel Green"))
             HStack {
                 Text(litter.name)
                     .font(.headline)
@@ -27,13 +37,21 @@ struct LitterView: View {
                     .font(.largeTitle)
                     .bold()
             }
-    
-            .padding()
+            .padding([.leading, .trailing], 36)
+            .padding([.top, .bottom], 24)
         }
-        .padding()
+        .border(.gray.opacity(0.1))
         .background(Color.white)
-        .cornerRadius(12)
-        .shadow(color: Color.gray.opacity(0.3), radius: 4)
+        .cornerRadius(20)
+        .shadow(color: .gray.opacity(0.1), radius: 4)
+        .scaleEffect(tap ? 0.98 : 1)
+        .onTapGesture {
+            tap.toggle()
+            DispatchQueue.main.asyncAfter(deadline: .now() + animationDuration) {
+                tap.toggle()
+            }
+        }
+        .animation(.spring(response: animationDuration, dampingFraction: 0.4), value: tap)
     }
 }
 

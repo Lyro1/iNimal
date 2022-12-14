@@ -18,10 +18,13 @@ struct Litter: ObjectSavable, Encodable, Decodable {
         let formatter = DateComponentsFormatter()
         formatter.allowedUnits = [.hour]
         let interval = Date().timeIntervalSince(lastClean)
-        let timeToLive: TimeInterval = 60 * 60 * 48
+        let timeToLive: TimeInterval = 48 * 60 * 60
         let result = formatter.string(from: timeToLive - interval)
         if ((result == nil) || interval > timeToLive) {
-            return "C'est l'heure !"
+            return "⌛️"
+        }
+        if (result == "0") {
+            return "<1h"
         }
         return result! + "h"
     }
@@ -43,6 +46,12 @@ struct Litter: ObjectSavable, Encodable, Decodable {
         else {
             return Color.red
         }
+    }
+    
+    public func clean() -> Void {
+        var litterToUpdate = self
+        litterToUpdate.lastClean = Date()
+        updateLitter(id: self.id, litter: litterToUpdate)
     }
     
     public func serialize()throws -> Data {
