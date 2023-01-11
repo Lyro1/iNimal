@@ -13,6 +13,7 @@ struct Litter: ObjectSavable, Encodable, Decodable {
     var name: String
     var emoji: String
     var lastClean: Date
+    var offset: CGFloat = 0
     
     public func getTimeRemaining() -> String {
         let formatter = DateComponentsFormatter()

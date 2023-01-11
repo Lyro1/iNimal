@@ -27,17 +27,36 @@ struct ContentView: View {
                 } else {
                     ScrollView {
                         VStack(spacing: 12) {
-                            ForEach(litters, id: \.id) { litter in
-                                LitterView(litter: litter)
-                                    .confirmationDialog("Êtes-vous sûr de vouloir supprimer " + litter.name + " ?",
-                                                        isPresented: $showingLitterDeletionConfirmation,
-                                                        titleVisibility: .visible) {
-                                        Button("Supprimer " + litter.name, role: .destructive) {
-                                            deleteLitter(id: litter.id)
-                                            litters = getAllLitters()
+                            ForEach(litters.indices) { index in
+                                ZStack {
+                                    Color("Dark Pastel Green")
+                                        .cornerRadius(20)
+                                    HStack {
+                                        Spacer()
+                                        Button(action: {showingLitterDeletionConfirmation = true}) {
+                                            Image(systemName: "paintbrush")
+                                                .font(.title)
+                                                .foregroundColor(.white)
+                                                .frame(width: 65)
                                         }
-                                        Button("Annuler", role: .cancel) {}
                                     }
+                                    LitterView(litter: litters[index])
+                                        .confirmationDialog("Êtes-vous sûr de vouloir supprimer " + litters[index].name + " ?",
+                                                            isPresented: $showingLitterDeletionConfirmation,
+                                                            titleVisibility: .visible) {
+                                            Button("Supprimer " + litters[index].name, role: .destructive) {
+                                                deleteLitter(id: litters[index].id)
+                                                litters = getAllLitters()
+                                            }
+                                            Button("Annuler", role: .cancel) {}
+                                        }
+                                    // drag gesture ...
+                                                            .offset(x: litters[index].offset)
+                                                            .gesture(DragGesture()
+                                                                .onChanged({(value) in onChanged(value: value, index: index)})
+                                                                .onEnded({(value) in onEnded(value: value, index: index)}))
+                                }
+                                .padding(.top)
                             }
                             
                         }
@@ -62,6 +81,22 @@ struct ContentView: View {
                 }
             }
             .background(Color.gray.opacity(0.1))
+        }
+    }
+    
+    func onChanged(value: DragGesture.Value, index: Int) {
+        if value.translation.width < 0 {
+            litters[index].offset = value.translation.width
+        }
+    }
+    
+    func onEnded(value: DragGesture.Value, index: Int) {
+        withAnimation {
+            if -value.translation.width >= 50 {
+                litters[index].offset = -80
+            } else {
+                litters[index].offset = 0
+            }
         }
     }
 }
